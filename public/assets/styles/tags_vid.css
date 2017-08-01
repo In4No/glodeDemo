@@ -1,0 +1,148 @@
+
+.product-quote{
+       background: url(quotes.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 51vw;
+    margin-top: 5vw;
+    max-height: 39.5vw;
+    min-height: 39.5vw;
+}
+
+.Circle1{
+   position: absolute;
+    left: 10vw;
+    bottom: 3vw;
+    width: 56vw;
+    height: 37vw;
+    background-image: url(c2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: Circle1Anim 310s linear;
+}
+
+.Circle2{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50vw;
+    height: 39vw;
+    background-image: url(c2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: Circle2Anim 310s linear;
+}
+
+.Circle3 {
+    position: absolute;
+    left: 5vw;
+    top: -5vw;
+    width: 70vw;
+    height: 29vw;
+    background-image: url(c1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: Circle3Anim 270s linear;
+}
+
+@keyframes Circle1Anim{
+    0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+@keyframes Circle2Anim{
+    0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(-360deg);
+}
+}
+
+@keyframes Circle3Anim{
+    0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+
+#vid2{
+    width: 21vw;
+    height: 18vw;
+    opacity: 0.5;
+    margin-top: 2.3vw;
+}
+
+#vid1{
+    height: 22vw;
+    margin-top: 2.5vw;
+    width: 35vw;
+}
+
+#vid1_div{
+    margin: 5vw 0 0 11.2vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#vid2_div{
+    position: absolute;
+    margin: 6.7vw 9.7vw;
+}
+
+#left-arrow{
+    opacity:.2;
+}
+#right-arrow{}
+
+
+@keyframes vid_change{
+    0% {  
+    margin: 5vw 0 0% 11.2vw;
+    position: absolute;
+    z-index: 1;;
+}
+50% {
+    margin: 5vw 0 0 22vw;
+}
+100%{
+   
+    position: absolute;
+}
+}
+
+@keyframes vid2_change{
+    0% {
+       z-index:0;
+
+}
+50%{
+}
+100%{
+    
+}
+}
+
+
+@keyframes vid2_frame{
+    0% {
+       z-index:0;
+       
+
+}
+
+100%{
+  
+    
+}
+}
+/*new css for video*/
+
+/**/

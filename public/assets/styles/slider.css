@@ -1,0 +1,33 @@
+
+.navbuttons {
+    display: inline-block;
+    overflow: auto;
+    overflow-y: hidden;
+
+    max-width: 100%;
+
+
+    white-space: nowrap;
+
+
+}
+
+.navbuttons li {
+    display: inline-block;
+    vertical-align: top;
+}
+.numb{
+    position: relative;
+    opacity: .2;
+    font-family: 'Hind', sans-serif;
+    font-size: 12vw;
+}
+
+.desc{
+    position: relative;
+    z-index: 2;
+    font-size: 1.8vw;
+    margin-left: 5.4vw;
+    margin-top: -11vw;
+    white-space: pre-wrap;
+}

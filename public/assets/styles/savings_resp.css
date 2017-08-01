@@ -1,0 +1,18 @@
+@media only screen and (max-width:460px){
+    .desc {
+       position: relative;
+    z-index: 2;
+    font-size: 6px;
+    margin-left: 20px;
+    margin-top: -12vw;
+    white-space: pre-wrap;
+    width: 63% !important;
+}
+
+.vertical-text {
+    
+    font-size: 2.5vw !important;
+  
+    
+}
+}

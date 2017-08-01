@@ -1,0 +1,2466 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+body{
+    /*padding: 20px;*/
+}
+
+#info{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    color: #ffffff;
+    z-index: 9999999;
+    font-size: 24px;
+}
+
+
+.main-darkBg{
+    background-color: #000000 !important;
+    background: none;
+}
+
+.earthBg{
+    position: absolute; 
+    z-index: 90; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: -100px;
+    background-image: url('../assetsfincare/earthBg.jpg');
+    background-size: cover;
+}
+
+.mapMenuWrprShrink{
+    left: 20%;
+    width: 60%;
+    bottom: 150px;
+    /*opacity: 1;*/
+    animation: shrinkMenu 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3.8s;
+}
+
+@keyframes shrinkMenu{
+    0%{
+        left: 20%;
+        width: 60%;
+        bottom: 150px;
+        /*opacity: 1;*/
+    }
+    100%{
+        left: 1%;
+        width: 20%;
+        bottom: 100px;
+        /*opacity: 0;*/
+    }
+}
+
+.menuLeftSecond{
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 1;
+    transform: scale(1);
+    animation: menuLeftFirst 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3.8s;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes menuLeftFirst{
+    0%{
+        margin-left: 0px;
+        margin-top: 0;
+        transform: scale(1);
+        /*opacity: 1;*/
+    }
+    100%{
+        margin-left: -170px;
+        margin-top: -10px;
+        transform: scale(0.8);
+        /*opacity: 0;*/
+    }
+}
+
+.menuLeftThird{
+    margin-left: 0;
+    margin-top: 0;
+    transform: scale(1);
+    opacity: 1;
+    animation: menuLeftSecond 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3.8s;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes menuLeftSecond{
+    0%{
+        margin-left: 0px;
+        margin-top: 0;
+        transform: scale(1);
+        /*opacity: 1;*/
+    }
+    100%{
+        margin-left: -250px;
+        margin-top: -10px;
+        transform: scale(0.8);
+        /*opacity: 0;*/
+    }
+}
+
+.menuLeftFourth{
+    margin-left: 0;
+    margin-top: 0;
+    transform: scale(1);
+    opacity: 1;
+    animation: menuLeftThird 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3.8s;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes menuLeftThird{
+    0%{
+        margin-left: 0px;
+        margin-top: 0;
+        transform: scale(1);
+        /*opacity: 1;*/
+    }
+    100%{
+        margin-left: -200px;
+        margin-top: -10px;
+        transform: scale(0.8);
+        /*opacity: 0;*/
+    }
+}
+
+.menuLeftFifth{
+    margin-left: 0;
+    margin-top: 0;
+    transform: scale(1);
+    opacity: 1;
+    animation: menuLeftFourth 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3.8s;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes menuLeftFourth{
+    0%{
+        margin-left: 0px;
+        margin-top: 0;
+        transform: scale(1);
+        /*opacity: 1;*/
+    }
+    100%{
+        margin-left: -220px;
+        margin-top: -10px;
+        transform: scale(0.8);
+        /*opacity: 0;*/
+    }
+}
+
+.tapIcon{
+    cursor: pointer;
+    width: 80px;
+    height: 60px;
+    background-image: url('../assetsfincare/icons/tap.png');
+    background-size: contain;
+    opacity: 0;
+    position: fixed;
+    bottom: 100px;
+    left: 100px;
+    z-index: 9999;
+    background-repeat: no-repeat;
+}
+
+.tapIconShow{
+    opacity: 0;
+    animation: showTapIcon 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3.8s;
+}
+
+@keyframes showTapIcon{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.menuLeftSecond .mapMenuText, .menuLeftThird .mapMenuText, .menuLeftFourth .mapMenuText, .menuLeftFifth .mapMenuText{
+    opacity: 1;
+    animation: hideTextAnim 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3.8s;
+}
+
+@keyframes hideTextAnim{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.noise-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  overflow: hidden;
+  z-index: 10;
+}
+/*.show-noise-wrapper{
+    opacity: 0;
+    animation: showNoise 0.3s ease-in-out;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes showNoise{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.5;
+    }
+}*/
+.noise-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.8) 75%, rgba(0, 0, 0, 1) 100%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.8) 75%, rgba(0, 0, 0, 1) 100%);
+}
+.noise {
+  position: absolute;
+  top: -500px;
+  right: -500px;
+  bottom: -500px;
+  left: -500px;
+  background: transparent url(https://www.dropbox.com/s/h7ab1c82ctzy83n/noise.png?dl=1) 0 0;
+  background-size: 320px 320px;
+  opacity: .4;
+  -webkit-animation: noise 1s steps(8, end) infinite both;
+          animation: noise 1s steps(8, end) infinite both;
+}
+@-webkit-keyframes noise {
+  0% {
+    -webkit-transform: translateX(0px, 0px);
+            transform: translateX(0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(-100px, 100px);
+            transform: translate(-100px, 100px);
+  }
+  20% {
+    -webkit-transform: translate(150px, -100px);
+            transform: translate(150px, -100px);
+  }
+  30% {
+    -webkit-transform: translate(-100px, 100px);
+            transform: translate(-100px, 100px);
+  }
+  40% {
+    -webkit-transform: translate(100px, -150px);
+            transform: translate(100px, -150px);
+  }
+  50% {
+    -webkit-transform: translate(-100px, 200px);
+            transform: translate(-100px, 200px);
+  }
+  60% {
+    -webkit-transform: translate(-200px, -100px);
+            transform: translate(-200px, -100px);
+  }
+  70% {
+    -webkit-transform: translateY(50px, 100px);
+            transform: translateY(50px, 100px);
+  }
+  80% {
+    -webkit-transform: translate(100px, -150px);
+            transform: translate(100px, -150px);
+  }
+  90% {
+    -webkit-transform: translate(0px, 200px);
+            transform: translate(0px, 200px);
+  }
+  100% {
+    -webkit-transform: translate(-100px, 100px);
+            transform: translate(-100px, 100px);
+  }
+}
+@keyframes noise {
+  0% {
+    -webkit-transform: translateX(0px, 0px);
+            transform: translateX(0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(-100px, 100px);
+            transform: translate(-100px, 100px);
+  }
+  20% {
+    -webkit-transform: translate(150px, -100px);
+            transform: translate(150px, -100px);
+  }
+  30% {
+    -webkit-transform: translate(-100px, 100px);
+            transform: translate(-100px, 100px);
+  }
+  40% {
+    -webkit-transform: translate(100px, -150px);
+            transform: translate(100px, -150px);
+  }
+  50% {
+    -webkit-transform: translate(-100px, 200px);
+            transform: translate(-100px, 200px);
+  }
+  60% {
+    -webkit-transform: translate(-200px, -100px);
+            transform: translate(-200px, -100px);
+  }
+  70% {
+    -webkit-transform: translateY(50px, 100px);
+            transform: translateY(50px, 100px);
+  }
+  80% {
+    -webkit-transform: translate(100px, -150px);
+            transform: translate(100px, -150px);
+  }
+  90% {
+    -webkit-transform: translate(0px, 200px);
+            transform: translate(0px, 200px);
+  }
+  100% {
+    -webkit-transform: translate(-100px, 100px);
+            transform: translate(-100px, 100px);
+  }
+}
+
+
+.logoWhite {
+    width: 200px;
+    height: 80px;
+    background-image: url(../assetsfincare/Fincare_LOGO_with_Bank_Line.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 9999;
+    cursor: pointer;
+    top: 20px;
+    left: 5%;
+}
+.main-pageBg{
+    background: #9F041B;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #F5515F 0%,#9F041B 100%);
+    -webkit-animation: Bg-gradient 600s ease infinite;
+    -moz-animation: Bg-gradient 600s ease infinite;
+    -o-animation: Bg-gradient 600s ease infinite;
+    animation: Bg-gradient 600s ease infinite;
+}
+
+@-webkit-keyframes Bg-gradient {
+    0%{
+        background: linear-gradient(to bottom, #F5515F 0%,#9F041B 100%);
+    }
+    
+    100%{
+        background: linear-gradient(to bottom, #e11c23,#b01d21);
+    }
+}
+@-moz-keyframes Bg-gradient {
+    0%{
+        background: linear-gradient(to bottom, #F5515F 0%,#9F041B 100%);
+    }
+    
+    100%{
+        background: linear-gradient(to bottom, #e11c23,#b01d21);
+    }
+}
+@-o-keyframes Bg-gradient {
+    0%{
+        background: linear-gradient(to bottom, #F5515F 0%,#9F041B 100%);
+    }
+    
+    100%{
+        background: linear-gradient(to bottom, #e11c23,#b01d21);
+    }
+}
+@keyframes Bg-gradient { 
+    0%{
+        background: linear-gradient(to bottom, #F5515F 0%,#9F041B 100%);
+    }
+    
+    100%{
+        background: linear-gradient(to bottom, #e11c23,#b01d21);
+    }
+}
+
+.bgWrpr{
+    position: relative;
+}
+
+.firstCircle{
+    position: absolute;
+    right: 5%;
+    top: 300px;
+    width: 300px;
+    height: 300px;
+    background-image: url("../assetsfincare/c2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation : firstCircleAnim 300s infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes firstCircleAnim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.secondCircle {
+    position: absolute;
+    right: -12%;
+    top: -27%;
+    width: 500px;
+    height: 500px;
+    background-image: url("../assetsfincare/c2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: secondCircleAnim 210s linear;
+}
+
+@keyframes secondCircleAnim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.thirdCircle {
+    position: absolute;
+    right: -10%;
+    top: 21%;
+    width: 800px;
+    height: 800px;
+    background-image: url("../assetsfincare/c2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: thirdCircleAnim 300s linear;
+}
+
+@keyframes thirdCircleAnim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.fourthCircle{
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+    width: 350px;
+    height: 350px;
+    background-image: url("../assetsfincare/c2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation : fourthCircleAnim 210s linear;
+}
+
+@keyframes fourthCircleAnim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.fifthCircle{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 900px;
+    height: 900px;
+    background-image: url("../assetsfincare/c2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation : fifthCircleAnim 300s linear;
+}
+
+@keyframes fifthCircleAnim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
+.sixthCircle{
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    width: 550px;
+    height: 550px;
+    background-image: url("../assetsfincare/c2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation : sixthCircleAnim 210s linear;
+}
+
+@keyframes sixthCircleAnim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.seventhCircle{
+    position: absolute;
+    right: 150px;
+    bottom: 100px;
+    width: 200px;
+    height: 200px;
+    background-image: url("../assetsfincare/c1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation : seventhCircleAnim 300s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes seventhCircleAnim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.eighthCircle{
+    position: absolute;
+    left: 350px;
+    top: 100px;
+    width: 300px;
+    height: 300px;
+    background-image: url("../assetsfincare/c1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation : eighthCircleAnim 300s linear;
+}
+
+@keyframes eighthCircleAnim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.main-menuItem:hover .main-menuImage{
+    /*transform: rotate(-15deg);
+    left: -20px;*/
+}
+
+.headerWrpr{
+    width: 100%;
+    padding:  0 50px;
+    box-sizing: border-box;
+    height: 70px;
+    position: absolute;
+    top: 50px;
+}
+
+.hamMenu{
+    background-image: url(../assetsfincare/menuLines.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 60px;
+    position: absolute;
+}
+
+.menu-wrpr{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    height: 0px;
+    position: relative;
+    top: 0;
+    padding: 20px;
+    padding-top: 60px;
+    overflow: hidden;
+    z-index: 9;
+    opacity: 0;
+    /*transform: all 0.3s linear;*/
+}
+
+.showMenu{
+    height: 0px;
+    top: 0px;
+    bottom: 0px;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    background-color :#000000;
+    animation: expandMenuAnim 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandMenuAnim{
+    0%{
+        height: 0px;
+        opacity: 0;
+        bottom: 0px;
+    }
+    100%{
+        height: 100%;
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+.menu-content{
+    width: 30%;
+    float: left;
+    margin-left: 20%;
+    margin-top: 70px;
+}
+
+.menu-content-main{
+    width: 40%;
+    float: left;
+    margin-left: 10%;
+}
+.menu-classification{
+    margin-bottom: 5px;
+    color: #f7f7f7;
+    cursor: pointer;
+    font-size: 60px;
+    margin-top: 50px;
+    transition: all 0.3s linear;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.menu-classification.active{
+    font-size: 70px;
+}
+.active:after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #ffdb17;
+}
+.menu-classification:hover{
+    color: #ffdb17;
+}
+.menu-content-text{
+    color: #a0a0a0;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: 'Hind', sans-serif;
+}
+
+.menu-content-text:hover{
+    font-size: 18px;
+    line-height: 20px;
+    color: #ffdb17;
+}
+
+.headerLeft{
+    width: 50%;
+    float: left;
+}
+
+.headerLogo{
+    width: 152px;
+    height: 70px;
+    background-image: url(../assets/styles/Fincare_logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px;
+    background-position: bottom 10px left 0px;
+    position: relative;
+    z-index: 10;
+}
+.bodyVideo{
+    width: 100%;
+    height: 100vh;
+}
+
+.showIt{
+    display: block;
+}
+
+.main-menuWrpr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-menuItem{
+    width: 30%;
+    margin: 1.5%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.menuItemRowTwo{
+    margin-top: 100px;
+}
+.main-menuImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform :rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.main-landingCopy{
+    color: #ffffff;
+    text-align: center;
+    font-size: 5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.main-landingSubCopy{
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+.main-landingStaticCopy{
+    color: #ffffff;
+    font-family: 'Hind', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.7em;
+    padding-top: 50px;
+    margin-bottom: 60px;
+}
+
+.main-menuText{
+    color: #ffffff;
+    width: 160px;
+    padding-top: 105px;
+    padding-left: 10px;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.main-menuCircle{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 65px;
+    margin-top: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+}
+.searchTop{
+    position: fixed;
+    height: 50vh;
+    background-color: #ffffff;
+    width: 100%;
+    top: -50vh;
+    z-index: 3;
+}
+.showSearchTop{
+    top: -50vh;
+    animation: animateSearchTop 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateSearchTop{
+    0%{
+        top: -50vh;
+    }
+    100%{
+        top: 0vh;
+    }
+}
+
+.searchBottom{
+    position: fixed;
+    height: 50vh;
+    width: 100%;
+    bottom: -50vh;
+    z-index: 3;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#efc5ca+0,5e69b5+0,d18189+65,f18e99+100 */
+    background: #ffffff;
+    /*background: -moz-linear-gradient(-45deg, #efc5ca 0%, #5e69b5 0%, #d18189 65%, #f18e99 100%);
+    background: -webkit-linear-gradient(-45deg, #efc5ca 0%,#5e69b5 0%,#d18189 65%,#f18e99 100%);
+    background: linear-gradient(135deg, #efc5ca 0%,#5e69b5 0%,#d18189 65%,#f18e99 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efc5ca', endColorstr='#f18e99',GradientType=1 );*/
+}
+.showSearchBottom{
+    bottom: -50vh;
+    animation: animateSearchBottom 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateSearchBottom{
+    0%{
+        bottom: -50vh;
+    }
+    100%{
+        bottom: 0vh;
+    }
+}
+
+.searchInnerAnim{
+    opacity: 0;
+    animation: animateSearchInner 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes animateSearchInner{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.searchInput{
+    width: 90vw;
+    font-size: 3.13vw;
+    line-height: 9vh;
+    border: none;
+    border-bottom: 4px solid #ededed;
+    color: #666666;
+    margin-left: 5vw;
+    margin-top: 18vh;
+}
+
+.recentSearchWrpr{
+   width: 90vw;
+    margin: 0 auto;
+    margin-top: 6vh;
+    color: #444444;
+}
+
+.recentData{
+    padding: 3vh 0;
+}
+
+.recentData>a:hover>.recentItems{
+    background-color: black;
+    color:white;
+}
+
+.recentItems{
+    padding: 0.4vw 0.6vw;
+    border: 1px solid #666666;
+    color: #666666;
+    margin-right: 1.6vw;
+    cursor: pointer;
+}
+.searchTag{
+    float: right;
+    margin-right: 5vw;
+    margin-top: 1vh;
+    color: #484848;
+    font-size: 1.4vw;
+}
+
+.searchExtra{
+    margin:0;
+    color: #6f6f6f;
+}
+.searchCard{
+    width: 15vw;
+    height: 36vh;
+    background-color: #888888;
+    float: left;
+    margin: 5vw;
+    margin-top: 5vh;
+    cursor: pointer;
+    background-size: cover;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    position: relative;
+    color: #222222;
+}
+
+.searchCardText{
+    position: absolute;
+    bottom: 2.5vw;
+    left: 1.5vw;
+    font-size: 1.8vw;
+}
+
+.searchCardBar{
+    position: absolute;
+    bottom: 1.6vw;
+    height: 4px;
+    width: 3.2vw;
+    background-color: #222222;
+    left: 1.5vw;
+}
+
+#searchClose{
+    position: absolute;
+    right: 3.5vw;
+    top: 7.5vh;
+    font-size: 8vw;
+    color: #666666;
+    transform: rotate(45deg);
+    cursor: pointer;
+    line-height: 1.4vw;
+}
+
+.searchLogo{
+    width: 100px;
+    height: 40px;
+    background-image: url("../img/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    padding: 10px;
+    background-position: bottom 20px left 10px;
+    background-size: 80%;
+    margin-left: 50px;
+}
+
+.infoText{
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    left: 10%; 
+    top: 27vh;
+    opacity: 0;
+    font-size: 6em;
+    line-height: 1em;
+    font-weight: bold;
+    z-index: 99999;
+    position: absolute;
+    animation: showInfotext 0.7s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes showInfotext{
+    0%{
+        opacity: 0;
+        top: 25vh;
+    }
+    100%{
+        opacity: 1;
+        top: 30vh;
+    }
+}
+
+.infoSubText{
+    color: #ffffff;
+    text-align: center;
+    bottom: 30vh;
+    width: 60%;
+    left: 20%;
+    opacity: 0;
+    position: absolute;
+    z-index: 999999;
+    font-size: 1.4em;
+    font-family: 'Hind', sans-serif;
+    animation: showInfoSubtext 0.7s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes showInfoSubtext{
+    0%{
+        opacity: 0;
+        bottom: 28vh;
+    }
+    100%{
+        opacity: 1;
+        bottom: 34vh;
+    }
+}
+
+.mapMenuWrpr{
+    position: absolute;
+    bottom: -15vh;
+    z-index: 999;
+    width: 60%;
+    left: 20%;
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    animation: showMapMenu 1.7s ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+    @keyframes showMapMenu{
+        0%{
+            transform: scale(1);
+            bottom: -15vh;
+        }
+        80%{
+            transform: scale(1.02);
+            bottom: 13vh;
+        }
+        100%{
+            transform: scale(1);
+            bottom: 12vh;
+        }
+    }
+
+.mapMenuItems{
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    justify-content: center;
+    opacity: 0.7;
+    float: left;
+    transition: all 0.5s ease-in-out;
+}
+
+.mapMenuItems:hover{
+    opacity: 1;
+}
+
+.mapMenuActive{
+    opacity: 1 !important;
+}
+
+.mapMenuCircle{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color:#ffffff;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: center;
+}
+
+.mapMenuText{
+    color: #ffffff;
+    margin-top: 10px;
+    font-family: 'Hind', sans-serif;
+    letter-spacing: 1px;
+}
+.iframe{
+    top: -200px;
+}
+.iframeFade{
+    opacity: 1;
+    transform: scale(1);
+    animation: iframeFadeAnim 0.7s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes iframeFadeAnim{
+    0%{
+        transform: scale(1);
+        opacity: 1
+    }
+    60%{
+        transform: scale(4);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+.videoPlayer{
+    position: absolute;
+    top: -100px;
+    left: -200px;
+    z-index: 9;
+    height: 130vh;
+    width: calc(100% + 400px);
+}
+
+.zoomFade{
+    opacity: 1;
+    animation: zoomFadeAnim 0.4s linear;
+    animation-fill-mode : forwards;
+    animation-delay: 2s;
+}
+
+@keyframes zoomFadeAnim{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.cloudWrpr{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.showFog{
+    display: block;
+    opacity: 0;
+    animation: showCloudsAnim 0.6s linear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showCloudsAnim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.fog{
+    position: fixed;
+    z-index:10;
+    left:0;
+    right: 0;
+    opacity: 1;
+    top: -500px;
+    width: 1000px;
+    height: 650px;
+    background-image: url("../img/cloud-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    animation: fogAnim 300s;
+    animation-timing-function: linear;
+}
+
+@keyframes fogAnim{
+    0%{
+        top: -500px;
+        left: 0;
+    }
+    25%{
+        top: -500px;
+        left: 100%;
+    }
+    50%{
+        top: -500px;
+        left: 100%;
+    }
+    100%{
+        top: -500px;
+        left: 0;
+    }
+}
+
+.fog1{
+    position: fixed;
+    z-index:10;
+    left:-200px;
+    opacity: 1;
+    bottom: -200px;
+    width: 1000px;
+    height: 650px;
+    background-image: url("../img/cloud-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    animation: fogAnim1 120s;
+    animation-timing-function: linear;
+}
+
+@keyframes fogAnim1{
+     0%{
+        left: -40%;
+        bottom: -200px;
+    }
+    25%{
+        left: 100%;
+        bottom: -200px;
+    }
+    50%{
+        left: 100%;
+        bottom: -200px;
+    }
+    100%{
+        left: -40%;
+        bottom: -200px;
+    }
+}
+
+.fog2{
+    position: fixed;
+    z-index:10;
+    left: 50%;
+    top: 100px;
+    width: 1000px;
+    opacity: 1;
+    height: 650px;
+    background-image: url("../img/cloud-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    animation: fogAnim2 120s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fogAnim2{
+    0%{
+        top: 100px;
+        left: 50%;
+    }
+    25%{
+        top: 100px;
+        left: 100%;
+    }
+    50%{
+        top: 100px;
+        left: 80%;
+    }
+    100%{
+        top: 100px;left: 50%;
+    }
+}
+
+.mapFadeOut{
+    opacity: 1;
+    animation: mapFadeoutAnim 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+
+@keyframes mapFadeoutAnim{
+    0%{
+        opacity: 1
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.mapMoveUp{
+    z-index: 1;
+    animation: mapMoveUpAnim 0.2s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes mapMoveUpAnim{
+    0%{
+        z-index: 1;
+    }
+    100%{
+        z-index: 10;
+    }
+}
+.mapPanWrpr{
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 104vh;
+    overflow: scroll;
+}
+
+#map{
+    left: 0;
+    top: 0;
+}
+.mapWrpr{
+    width: 300%;
+    height: 300vh;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 40px;
+}
+.showWrapper{
+    width: 300%;
+    height: 300vh;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+
+.zone{
+    opacity: 0;
+    transform: scale(0);
+}
+
+.showZone{
+    opacity: 0;
+    transform: scale(0);
+    animation: showZone 0.5s ease-in-out;
+    animation-delay: 6.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showZone{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    70%{
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.showZone:hover{
+    background-color: rgba(255,255,255,0.23);
+}
+
+
+.accountZone{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.depositZone{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 200px;
+    top: 200px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.loansZone{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 200px;
+    bottom: 200px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.companyZone{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 700px;
+    bottom: 900px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.supportZone{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 700px;
+    bottom: 900px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.accountMapMarker{
+    width: 40px;
+    height: 80px;
+    background-image: url('../assetsfincare/icons/pin.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.markerFirst{
+    position: absolute;
+    cursor: pointer;
+    top: 155px;
+    left: 177px;
+    background-size: 15%;
+    width: 150px;
+    color: #51ad60;
+    background-position: top 7% center;
+    opacity: 0;
+}
+
+.markerFirstAnim{
+    opacity: 0;
+    top: 100px;
+    animation: markerFirstAnim 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 6.8s; 
+}
+
+@keyframes markerFirstAnim{
+    0%{
+        opacity: 0;
+        top: 100px;
+    }
+    100%{
+        opacity: 1;
+        top: 155px;
+    }
+}
+
+.markerSecond{
+    position: absolute;
+    cursor: pointer;
+    top: 19px;
+    right: 150px;
+    background-size: 15%;
+    width: 150px;
+    color: #51ad60;
+    background-position: top 7% center;
+}
+.markerThird{
+    position: absolute;
+    cursor: pointer;
+    top: 200px;
+    left: 50px;
+    background-size: 15%;
+    width: 150px;
+    color: #51ad60;
+    background-position: top 7% center;
+}
+.markerFourth{
+    position: absolute;
+    cursor: pointer;
+    bottom: 160px;
+    right: 79px;
+    background-size: 15%;
+    width: 150px;
+    color: #51ad60;
+    background-position: top 7% center;
+}
+.markerFifth{
+    position: absolute;
+    cursor: pointer;
+    bottom: 49px;
+    left: 142px;
+    background-size: 15%;
+    width: 150px;
+    color: #51ad60;
+    background-position: top 7% center;
+}
+.markerText{
+    margin-top: 34px;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+.cardBottom{
+    width: 559px;
+    height: 80%;
+    position: fixed;
+    right: -559px;
+    bottom: 7%;
+    transform: rotate(0deg);
+    background-color: #000000;
+    z-index: 9999;
+}
+.cardBottomAnim{
+    right: -559px;
+    transform: rotate(0deg);
+    animation : cardBottomAnimation 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cardBottomAnimation{
+    0%{
+        right: -559px;
+        transform: rotate(0deg);
+    }
+    100%{
+        right: 120px;
+        transform: rotate(-4.5deg);
+    }
+}
+
+.cardTop{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    width: 559px;
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 99999;
+    background-color: #000000;
+    right: -800px;
+    bottom: 5%;
+    transform: rotate(0deg);
+    padding: 40px;
+    padding-right: 100px;
+    cursor: pointer;
+}
+
+.cardTopAnim{
+    right: -800px;
+    bottom: 5%;
+    transform: rotate(12.5deg);
+    animation : cardTopAnimation 0.5s ease-in-out;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cardTopAnimation{
+    0%{
+        right: -800px;
+        transform: rotate(12.5deg);
+        bottom: 5%;
+    }
+    100%{
+        right: -70px;
+        transform: rotate(0deg);
+        bottom: 5%;
+    }
+}
+
+.cardClose{
+    position: absolute;
+    right: 60px;
+    cursor: pointer;
+    font-size: 40px;
+    color: #666666;
+    z-index: 9999;
+    width: 100px;
+    top: 40px;
+}
+.menuClose{
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    cursor: pointer;
+    font-size: 40px;
+    color: #666666;
+}
+.cardHeading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    color: #000000;
+    float: left;
+}
+
+.cardIcon{
+    margin-left: 20px;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.cardTopWrpr{
+    margin-bottom: 40px;
+}
+
+.cardContent{
+    font-size: 24px;
+    font-family: 'Hind', sans-serif;
+    line-height: 36px;
+    color: rgba(0,0,0,0.8);
+}
+
+@media only screen and (min-width: 1400px){
+    .main-menuImage{
+        background-size: 44% !important;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .infoText {
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+        left: 0%;
+        top: 42vh;
+        font-size: 5em;
+        line-height: 1.2em;
+        font-weight: bold;
+        z-index: 99999;
+        position: absolute;
+    }
+    .mapMenuWrpr {
+        position: absolute;
+        bottom: 5vh;
+        z-index: 999;
+        width: 80%;
+        left: 10%;
+        overflow: hidden;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .infoSubText {
+        color: #ffffff;
+        text-align: center;
+        bottom: 22vh;
+        width: 60%;
+        left: 20%;
+        position: absolute;
+        z-index: 999999;
+        font-size: 1.4em;
+        font-family: 'Hind', sans-serif;
+    }
+    .logoWhite {
+        width: 200px;
+        height: 80px;
+        background-image: url(../assetsfincare/Fincare_LOGO_with_Bank_Line.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: fixed;
+        z-index: 9999;
+        cursor: pointer;
+        top: 22px;
+        left: 5%;
+    }
+   
+}
+@media only screen and (max-width: 800px) and (min-width:481px) {
+    .searchCard {
+    margin: 2vw 0vw 0 5vw !important;
+    width: 19vw !important;
+    }   
+}
+
+@media only screen and (max-width: 480px) {
+    .bodyVideo{
+        margin-top: -70px;
+    }
+
+    .menuItemRowTwo{
+        margin-top: 100px;
+    }
+    /*.searchInput {
+        width: 50%;
+        font-size: 40px;
+        line-height: 60px;
+        border: none;
+        border-bottom: 4px solid #ededed;
+        color: #666666;
+        margin-left: 25%;
+    }*/
+    .searchCard {
+    width: 40vw;
+    height: 18vh;
+    background-color: #888888;
+    float: left;
+    margin: 5vw;
+    margin-top: 5vh;
+    cursor: pointer;
+    background-size: cover;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    position: relative;
+    color: #222222;
+}
+    .searchCardText {
+    position: absolute;
+    bottom: 2.5vw;
+    left: 1.5vw;
+    font-size: 2.8vw;
+}
+.searchCardBar {
+    position: absolute;
+    bottom: 1.6vw;
+    height: 4px;
+    width: 6.2vw;
+    background-color: #222222;
+    left: 1.5vw;
+}
+
+.searchInput {
+    width: 90vw;
+    font-size: 5.13vw;
+    line-height: 4vh;
+    border: none;
+    border-bottom: 4px solid #ededed;
+    color: #666666;
+    margin-left: 5vw;
+    margin-top: 14vh;
+}
+
+    .searchTag {
+    float: right;
+    margin-right: 5vw;
+    margin-top: 1vh;
+    color: #484848;
+    font-size: 2.4vw;
+    }
+    .searchExtra {
+    margin: 0;
+    color: #6f6f6f;
+    font-size: initial;
+    }
+
+    .searchBottom {
+        position: fixed;
+        height: 54vh;
+        width: 100%;
+        bottom: -54vh;
+        z-index: 3;
+        background: #ffffff;
+    }
+    .recentItems {
+        padding: 0.4vw 0.6vw;
+        border: 1px solid #666666;
+        color: #666666;
+        margin-right: 1.6vw;
+        cursor: pointer;
+        font-size: 13px;
+    }
+
+    body {
+        padding: 0px;
+    }
+   .headerLeft{
+        width: 100%;
+        float: left;
+    }
+    .headerWrpr{
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        padding-top: 0px;
+        border-top: 10px solid #ffffff;
+        height: 70px;
+    }
+    .main-landingSubCopy {
+        color: #ffffff;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 1.6em;
+        line-height: 1.2;
+    }
+    .main-landingStaticCopy {
+        color: #ffffff;
+        font-family: 'Hind', sans-serif;
+        text-align: center;
+        font-size: 1.4em;
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+    .main-landingCopy {
+        color: #ffffff;
+        text-align: center;
+        font-size: 4em;
+        margin-top: 50px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+    }
+    .main-menuImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: 85% !important;
+        background-repeat: no-repeat;
+        z-index: 1;
+        transform: rotate(0deg);
+        transition: all 0.3s ease-in-out;
+    }
+    .main-pageBg{
+        overflow: auto;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .main-menuCircle {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-left: 43px;
+        margin-top: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main-menuItem {
+        width: 50%;
+        margin: 2.5%;
+        height: 30vh;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    .main-menuText {
+        color: #ffffff;
+        width: 110px;
+        padding-top: 0px;
+        padding-left: 130px;
+        margin-top: -26px;
+    }
+   
+  .searchCard:hover{
+      background: black !important;
+    }    
+    .logoWhite {
+        width: 142px;
+        height: 60px;
+        background-image: url(../assetsfincare/Fincare_LOGO_with_Bank_Line.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: fixed;
+        z-index: 9999;
+        cursor: pointer;
+        top: 10px;
+        left: 5%;
+    }
+    .infoText {
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+        left: 0%;
+        top: 5vh;
+        font-size: 3em;
+        line-height: 1.2em;
+        font-weight: bold;
+        z-index: 99999;
+        position: absolute;animation: showInfotext 0.7s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 0.8s;
+    }
+
+    @keyframes showInfotext{
+        0%{
+            opacity: 0;
+            top: 5vh;
+        }
+        100%{
+            opacity: 1;
+            top: 15vh;
+        }
+    }
+    .infoSubText {
+        color: #ffffff;
+        text-align: center;
+        bottom: 24vh;
+        width: 60%;
+        left: 20%;
+        position: absolute;
+        z-index: 999999;
+        font-size: 0.8em;
+        font-family: 'Hind', sans-serif;
+        animation: showInfoSubtext 0.7s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+    }
+
+    @keyframes showInfoSubtext{
+        0%{
+            opacity: 0;
+            bottom: 28vh;
+        }
+        100%{
+            opacity: 1;
+            bottom: 50vh;
+        }
+    }
+
+    .mapMenuText {
+        color: #ffffff;
+        margin-top: 10px;
+        font-family: 'Hind', sans-serif;
+        letter-spacing: 1px;
+        font-size: 0.8em;
+    }
+    .mapMenuItems {
+        width: 80px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        margin: 0 10px;
+    }
+
+    .mapMobileScroller{
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .mapMenuWrpr {
+        position: absolute;
+        bottom: -50vh;
+        z-index: 999;
+        width: 100%;
+        left: 0;
+        height: auto;
+        flex-wrap: wrap;
+        /* display: block; */
+        overflow: scroll;
+        animation: showMapMenu 1.7s ease-in-out;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+        @keyframes showMapMenu{
+            0%{
+                transform: scale(1);
+                bottom: -15vh;
+            }
+            80%{
+                transform: scale(1.02);
+                bottom: 5vh;
+            }
+            100%{
+                transform: scale(1);
+                bottom: 3vh;
+            }
+        }
+
+        .mapMenuWrprShrink{
+            left: 0;
+            width: 100%;
+            bottom: 3vh;
+            animation: shrinkMenu 1.5s ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3.8s;
+        }
+
+        @keyframes shrinkMenu{
+            0%{
+                left: 0;
+                width: 100%;
+                bottom: 3vh;
+            }
+            100%{
+                left: 0;
+                width: 100%;
+                bottom: 3vh;
+            }
+        }
+
+        .menuLeftSecond{
+            margin-left: 0;
+            margin-top: 0;
+            opacity: 1;
+            transform: scale(1);
+            animation: menuLeftFirst 1.5s ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3.8s;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes menuLeftFirst{
+            0%{
+                margin-left: 0px;
+                margin-top: 0;
+                transform: scale(1);
+                /*opacity: 1;*/
+            }
+            100%{
+                margin-left: -60px;
+                margin-top: -10px;
+                transform: scale(0.8);
+                /*opacity: 0;*/
+            }
+        }
+
+        .menuLeftThird{
+            margin-left: 0;
+            margin-top: 0;
+            transform: scale(1);
+            opacity: 1;
+            animation: menuLeftSecond 1.5s ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3.8s;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes menuLeftSecond{
+            0%{
+                margin-left: 0px;
+                margin-top: 0;
+                transform: scale(1);
+                /*opacity: 1;*/
+            }
+            100%{
+                margin-left: -100px;
+                margin-top: -10px;
+                transform: scale(0.8);
+                /*opacity: 0;*/
+            }
+        }
+
+        .menuLeftFourth{
+            margin-left: 0;
+            margin-top: 0;
+            transform: scale(1);
+            opacity: 1;
+            animation: menuLeftThird 1.5s ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3.8s;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes menuLeftThird{
+            0%{
+                margin-left: 0px;
+                margin-top: 0;
+                transform: scale(1);
+                /*opacity: 1;*/
+            }
+            100%{
+                margin-left: -120px;
+                margin-top: -10px;
+                transform: scale(0.8);
+                /*opacity: 0;*/
+            }
+        }
+
+        .menuLeftFifth{
+            margin-left: 0;
+            margin-top: 0;
+            transform: scale(1);
+            opacity: 1;
+            animation: menuLeftFourth 1.5s ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3.8s;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes menuLeftFourth{
+            0%{
+                margin-left: 0px;
+                margin-top: 0;
+                transform: scale(1);
+                /*opacity: 1;*/
+            }
+            100%{
+                margin-left: -120px;
+                margin-top: -10px;
+                transform: scale(0.8);
+                /*opacity: 0;*/
+            }
+        }
+
+        .accountZone{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .depositZone{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            right: 200px;
+            top: 200px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .loansZone{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 200px;
+            bottom: 200px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .companyZone{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 700px;
+            bottom: 900px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .supportZone{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            right: 700px;
+            bottom: 900px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+        }
+        .markerFirst{
+            position: absolute;
+            cursor: pointer;
+            top: 155px;
+            left: 177px;
+            background-size: 15%;
+            width: 150px;
+            color: #51ad60;
+            background-position: top 7% center;
+            opacity: 0;
+        }
+
+        .markerFirstAnim{
+            opacity: 0;
+            top: 50px;
+            animation: markerFirstAnim 0.3s ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 6.8s; 
+        }
+
+        @keyframes markerFirstAnim{
+            0%{
+                opacity: 0;
+                top: 50px;
+            }
+            100%{
+                opacity: 1;
+                top: 75px;
+            }
+        }
+
+        .markerSecond{
+            position: absolute;
+            cursor: pointer;
+            top: 120px;
+            right: 150px;
+            background-size: 15%;
+            width: 150px;
+            color: #51ad60;
+            background-position: top 7% center;
+        }
+        .markerThird{
+            position: absolute;
+            cursor: pointer;
+            top: 200px;
+            left: 50px;
+            background-size: 15%;
+            width: 150px;
+            color: #51ad60;
+            background-position: top 7% center;
+        }
+        .markerFourth{
+            position: absolute;
+            cursor: pointer;
+            bottom: 200px;
+            right: 79px;
+            background-size: 15%;
+            width: 150px;
+            color: #51ad60;
+            background-position: top 7% center;
+        }
+        .markerFifth{
+            position: absolute;
+            cursor: pointer;
+            bottom: 49px;
+            left: 142px;
+            background-size: 15%;
+            width: 150px;
+            color: #51ad60;
+            background-position: top 7% center;
+        }
+        .videoPlayer{
+            position: absolute;
+            top: -100px;
+            left: -200px;
+            z-index: 9;
+            height: 150vh;
+            width: 400%;
+        }
+}

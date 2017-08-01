@@ -1,0 +1,499 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+
+            <div class="main-pageBg" style="overflow: hidden; background: none;">
+                <!--<div class="logoWhite"></div>-->
+                <div class="tapIcon"></div>
+                <div class="headerWrpr clearfix">
+                    <div class="headerLeft clearfix">
+                    </div>
+                </div>
+                <div class="bodyVideo">
+                    <div id="container" style="position: absolute; z-index: 99;"></div>
+                    <div class="earthBg"></div>
+                    <video id="video1" class="videoPlayer" src="./img/earth3.mov" type="video/mov"></video>
+                    <div class="mapPanWrpr">
+                        <div id='map' style='width: 300%; height: 300vh;'></div>
+                        <div class="noise-wrapper">
+                            <div class="noise"></div>
+                        </div>
+                        <div class="cloudWrpr">
+                            <div class="fog"></div>
+                            <div class="fog1"></div>
+                            <div class="fog2"></div>
+                        </div>
+                        <div class="mapOverlay">
+                            <div class="cardBottom"></div>
+                            <div class="cardTop">
+                                <div class="cardClose">x</div>
+                            </div>
+                            <div class="accountZone zone">
+                                <div class="accountMapMarker markerFirst">
+                                  <span class="markerText">OPTION I</span>
+                                </div>
+                                <div class="accountMapMarker markerSecond">
+                                  <span class="markerText">OPTION II</span>
+                                </div>
+                                <div class="accountMapMarker markerThird">
+                                  <span class="markerText">OPTION III</span>
+                                </div>
+                                <div class="accountMapMarker markerFourth">
+                                  <span class="markerText">OPTION IV</span>
+                                </div>
+                                <div class="accountMapMarker markerFifth">
+                                  <span class="markerText">OPTION V</span>
+                                </div>
+                            </div>
+                            <div class="depositZone zone">
+                                <div class="accountMapMarker markerFirst"></div>
+                                <div class="accountMapMarker markerSecond"></div>
+                                <div class="accountMapMarker markerThird"></div>
+                                <div class="accountMapMarker markerFourth"></div>
+                                <div class="accountMapMarker markerFifth"></div>
+                            </div>
+                            <div class="loansZone zone">
+                                <div class="accountMapMarker markerFirst"></div>
+                                <div class="accountMapMarker markerSecond"></div>
+                                <div class="accountMapMarker markerThird"></div>
+                                <div class="accountMapMarker markerFourth"></div>
+                                <div class="accountMapMarker markerFifth"></div>
+                            </div>
+                            <div class="companyZone zone">
+                                <div class="accountMapMarker markerFirst"></div>
+                                <div class="accountMapMarker markerSecond"></div>
+                                <div class="accountMapMarker markerThird"></div>
+                                <div class="accountMapMarker markerFourth"></div>
+                                <div class="accountMapMarker markerFifth"></div>
+                            </div>
+                            <div class="supportZone zone">
+                                <div class="accountMapMarker markerFirst"></div>
+                                <div class="accountMapMarker markerSecond"></div>
+                                <div class="accountMapMarker markerThird"></div>
+                                <div class="accountMapMarker markerFourth"></div>
+                                <div class="accountMapMarker markerFifth"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div id="info"></div>-->
+                    <div class="mapMobileScroller">
+                    <div class="mapMenuWrpr cf">
+                        <div class="mapMenuItems mapMenuFirst" style="position: relative; z-index: 5;">
+                            <div class="mapMenuCircle" style="background-image: url('./assetsfincare/icons/account.png')"></div>
+                            <div class="mapMenuText">I</div>
+                        </div>
+                        <div class="mapMenuItems mapMenuSecond">
+                            <div class="mapMenuCircle" style="background-image: url('./assetsfincare/icons/deposit.png')"></div>
+                            <div class="mapMenuText">II</div>
+                        </div>
+                        <div class="mapMenuItems mapMenuThird">
+                            <div class="mapMenuCircle"  style="background-image: url('./assetsfincare/icons/support.png')"></div>
+                            <div class="mapMenuText">III</div>
+                        </div>
+                        <div class="mapMenuItems mapMenuFourth">
+                            <div class="mapMenuCircle" style="background-image: url('./assetsfincare/icons/company.png')"></div>
+                            <div class="mapMenuText">IV</div>
+                        </div>
+                        <div class="mapMenuItems mapMenuFifth">
+                            <div class="mapMenuCircle" style="background-image: url('./assetsfincare/icons/loan.png')"></div>
+                            <div class="mapMenuText">V</div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="innerWrapper">
+                        <div class="infoText">Explore Global Data</div>
+                        <div class="infoSubText">Start by selecting a product below</div>
+                    </div>
+                </div>
+            </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            function initMap() {
+                var styledMapType = new google.maps.StyledMapType(
+                    [
+                    {
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#212121"
+                        }
+                      ]
+                    },
+                    {
+                      "elementType": "geometry.fill",
+                      "stylers": [
+                        {
+                          "color": "#003311"
+                        },
+                        {
+                          "saturation": -85
+                        }
+                      ]
+                    },
+                    {
+                      "elementType": "geometry.stroke",
+                      "stylers": [
+                        {
+                          "color": "#000000"
+                        },
+                        {
+                          "saturation": -90
+                        }
+                      ]
+                    },
+                    {
+                      "elementType": "labels.icon",
+                      "stylers": [
+                        {
+                          "visibility": "off"
+                        }
+                      ]
+                    },
+                    {
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#757575"
+                        }
+                      ]
+                    },
+                    {
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                        {
+                          "color": "#212121"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#757575"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.country",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#9e9e9e"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.land_parcel",
+                      "stylers": [
+                        {
+                          "visibility": "off"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.locality",
+                      "elementType": "labels.text",
+                      "stylers": [
+                        {
+                          "color": "#5a5a5a"
+                        },
+                        {
+                          "saturation": -5
+                        },
+                        {
+                          "lightness": -100
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.locality",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#616161"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.locality",
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                        {
+                          "visibility": "off"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.province",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#898989"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#757575"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi.park",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#181818"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi.park",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#616161"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi.park",
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                        {
+                          "color": "#1b1b1b"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road",
+                      "elementType": "geometry.fill",
+                      "stylers": [
+                        {
+                          "color": "#2c2c2c"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#8a8a8a"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road.arterial",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#373737"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road.highway",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#3c3c3c"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road.highway.controlled_access",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#4e4e4e"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road.local",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#616161"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "transit",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#757575"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "water",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#000000"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "water",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#3d3d3d"
+                        }
+                      ]
+                    }
+                  ],
+                    {name: 'Styled Map'}
+                );
+
+                var latitude = 12.9762;
+                var longitude = 77.6033;
+
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    }
+                }
+                function showPosition(position) {
+                    latitude = position.coords.latitude;
+                    longitude = position.coords.longitude;
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: latitude, lng: longitude},
+                        zoom: 15,
+                        mapTypeControlOptions: {
+                            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain','styled_map']
+                        }
+                    });
+                    map.mapTypes.set('styled_map', styledMapType);
+                    map.setMapTypeId('styled_map');
+                }
+
+                getLocation()
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiQUvsX0QCaBS3qdd-syGnXwG_0RLcor0&callback=initMap">
+    </script>
+    <script src="build/three.js"></script>
+
+		<script src="js/renderers/Projector.js"></script>
+		<script src="js/renderers/CanvasRenderer.js"></script>
+
+		<script src="js/libs/stats.min.js"></script>
+
+		<script>
+			var container, stats;
+			var camera, scene, renderer;
+			var group;
+			var mouseX = 0, mouseY = 0;
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			init();
+			animate();
+			function init() {
+				container = document.getElementById( 'container' );
+				camera = new THREE.PerspectiveCamera( 60, (window.innerWidth / window.innerHeight), 1, 10000 );
+				camera.position.z = 400;
+				scene = new THREE.Scene();
+				group = new THREE.Group();
+				scene.add( group );
+				// earth
+				var loader = new THREE.TextureLoader();
+				loader.load( 'textures/earth-night-large.jpg', function ( texture ) {
+					var geometry = new THREE.SphereGeometry( 200, 20, 20 );
+					var material = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5 } );
+					var mesh = new THREE.Mesh( geometry, material );
+					group.add( mesh );
+				} );
+				// shadow
+				var canvas = document.createElement( 'canvas' );
+				canvas.width = 128;
+				canvas.height = 128;
+				var context = canvas.getContext( '2d' );
+				var gradient = context.createRadialGradient(
+					canvas.width / 2,
+					canvas.height / 2,
+					0,
+					canvas.width / 2,
+					canvas.height / 2,
+					canvas.width / 2
+				);
+				// gradient.addColorStop( 0.1, 'rgba(210,210,210,1)' );
+				// gradient.addColorStop( 1, 'rgba(255,255,255,1)' );
+				context.fillStyle = gradient;
+				context.fillRect( 0, 0, canvas.width, canvas.height );
+				var texture = new THREE.CanvasTexture( canvas );
+				var geometry = new THREE.PlaneBufferGeometry( 300, 300, 3, 3 );
+				var material = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5 } );
+				var mesh = new THREE.Mesh( geometry, material );
+				mesh.position.y = - 250;
+				mesh.rotation.x = - Math.PI / 2;
+				group.add( mesh );
+				renderer = new THREE.CanvasRenderer({ alpha : true });
+				renderer.setClearColor( 0Xffffff, 0 );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+				// stats = new Stats();
+				// container.appendChild( stats.dom );
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+			}
+			function onWindowResize() {
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+			function onDocumentMouseMove( event ) {
+				// mouseX = ( event.clientX - windowHalfX );
+				// mouseY = ( event.clientY - windowHalfY );
+			}
+			//
+			function animate() {
+				requestAnimationFrame( animate );
+				render();
+				// stats.update();
+			}
+			function render() {
+				// camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+				camera.position.y += ( mouseY - camera.position.y ) * 1;
+				camera.lookAt( scene.position );
+				group.rotation.y -= 0.001;
+				renderer.render( scene, camera );
+			}
+		</script>
+    </body>
+</html>
